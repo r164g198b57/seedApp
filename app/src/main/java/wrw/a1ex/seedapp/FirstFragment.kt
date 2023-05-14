@@ -49,11 +49,11 @@ class FirstFragment : Fragment() {
 
             if(!isNumber(string)){
                 if (!string.contains(" ")){
-                    string.replace("  "," ")
-                    string.replace("   "," ")
                   totext =  numberOfWord(string)
                 }
                 if(string.contains(" ")){
+                    string.replace("  "," ")
+                    string.replace("   "," ")
                     val array =string.split(" ")
                     totext = numberOfWord(array)
                 }
