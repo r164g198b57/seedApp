@@ -4,7 +4,6 @@
     <string name="generate_text">Generate</string>
     <string name="output_text"><![CDATA[... & press Generate]]></string>
     <string name="copy_text">Copy</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="copied_to_clipboard">Done!</string>
     <string name="error_message">ErRoR</string>

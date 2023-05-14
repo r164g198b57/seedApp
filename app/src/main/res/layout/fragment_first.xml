@@ -7,20 +7,20 @@
     tools:context=".MainActivity"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/inputText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="26dp"
-            android:autofillHints=""
-            android:ems="10"
-            android:gravity="start|top"
-            android:hint="@string/input_hint"
-            android:inputType="textMultiLine"
-            android:lines="4"
-            android:minHeight="48dp"
-            android:textColorHint="#8D6E63"
-            tools:ignore="VisualLintTextFieldSize" />
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/input_hint"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:minHeight="48dp"
+        android:textColorHint="#8D6E63"
+        tools:ignore="VisualLintTextFieldSize" />
 
         <EditText
             android:id="@+id/exportText"

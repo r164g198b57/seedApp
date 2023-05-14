@@ -41,10 +41,16 @@ class FirstFragment : Fragment() {
         super.onStart()
 
         generateBttn.setOnClickListener(){
-            var string = inputText.text.toString().lowercase().trim()
             var totext = ""
+            if (inputText.length()==0)
+                Toast.makeText(activity, R.string.error_message, Toast.LENGTH_SHORT).show()
+
+            var string = inputText.text.toString().lowercase().trim()
+
             if(!isNumber(string)){
                 if (!string.contains(" ")){
+                    string.replace("  "," ")
+                    string.replace("   "," ")
                   totext =  numberOfWord(string)
                 }
                 if(string.contains(" ")){
@@ -68,13 +74,14 @@ class FirstFragment : Fragment() {
                 clipboardManager.setPrimaryClip(clipData)
                 Toast.makeText(activity, R.string.copied_to_clipboard, Toast.LENGTH_SHORT).show()
             }
+            else Toast.makeText(activity, R.string.error_message, Toast.LENGTH_SHORT).show()
         }
     }
 
     private fun nomberToString(string: String) : String{
 
         if(string.length<4) Toast.makeText(activity, R.string.error_message, Toast.LENGTH_SHORT).show()
-            val array = string.chunked(4)
+        val array = string.chunked(4)
         val result = StringBuilder("")
         for(i in array)result.append(numberToWord(i)+" ")
         return result.toString()
