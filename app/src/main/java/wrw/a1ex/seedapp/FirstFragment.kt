@@ -1,10 +1,10 @@
 package wrw.a1ex.seedapp
 
+import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context.CLIPBOARD_SERVICE
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,10 +12,19 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 
+
+@SuppressLint("StaticFieldLeak")
 private lateinit var generateBttn: Button
+
+@SuppressLint("StaticFieldLeak")
 private lateinit var copyBttn: Button
+
+@SuppressLint("StaticFieldLeak")
 private lateinit var inputText: TextView
+
+@SuppressLint("StaticFieldLeak")
 private lateinit var resultText: TextView
 
 class FirstFragment : Fragment() {
@@ -52,8 +61,8 @@ class FirstFragment : Fragment() {
                   totext =  numberOfWord(string)
                 }
                 if(string.contains(" ")){
-                    string.replace("  "," ")
-                    string.replace("   "," ")
+                    string = string.replace("  "," ")
+                    string = string.replace("   "," ")
                     val array =string.split(" ")
                     totext = numberOfWord(array)
                 }
