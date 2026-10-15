@@ -1,4 +1,4 @@
-package wrw.a1ex.seedapp
+package com.example.seedapp
 
 import org.junit.Test
 
